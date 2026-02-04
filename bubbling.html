@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bubbling.css">
+</head>
+
+<body>
+    <h1>Event Flow Playground</h1>
+    <h3>Demonstrating capturing, bubbling and propogation</h3>
+    <div class="box">
+        <div class="grandparent">
+            <h3>Grand parent</h3>
+            <div class="parent">
+                <h3>Parent</h3>
+                <button class="child">Click me </button>
+            </div>
+        </div>
+
+        <div class="EventLog">
+            <span style="font-weight: 900; font-size: larger;"> Event Log </span>
+            <button class="clear">Clear Log</button>
+            <ul class="list">
+            </ul>
+            <!-- <p class="content">
+                Capturing -> <span class="capturing"></span>
+                <br>
+                GrandParent -> <span class="parentdata"></span>
+                <br>
+                Parent -> <span class="parentdata"></span>
+            </p> -->
+            <p>
+                Capturing -> Target -> Bubbling <br>
+                stopPropogation blocks Parent <br>
+                stopImmediatePropogation blocks sibling handlers
+            </p>
+        </div>
+    </div>
+    <script src="./bubbling.js"></script>
+</body>
+
+</html>
